@@ -35,7 +35,7 @@ namespace Exo11Salaire.NET
             _matricule = Matricule;
             _service = Service;
             _nom = Nom;
-            this.Salaire = Salaire; // J'utilise la propriété Salaire pour utiliser la validation.
+            this.Salaire = Salaire; // J'utilise this pour indiquer que je veux l'instance "Salaire" a la place du paramétre du constructeur.
         }
     }
 }
