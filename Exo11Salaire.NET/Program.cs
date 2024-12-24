@@ -2,7 +2,7 @@
 using Exo11Salaire.NET;
 
 
-Salarié chloé = new Salarié(18232, "Cantine", "Chloé", 24000 );
+Salarié chloé = new Salarié(18232, "Cantine", "Chloé", 10000002);
 Salarié emma = new Salarié(25424, "Bureau", "Emma", 26000);
 Salarié goerges = new Salarié(1182, "Informatique", "Goerges", 28000);
 

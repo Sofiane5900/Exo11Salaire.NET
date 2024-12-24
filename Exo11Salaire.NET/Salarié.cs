@@ -16,7 +16,18 @@ namespace Exo11Salaire.NET
         public int Matricule { get => _matricule; set => _matricule = value; }
         public string Service { get => _service; set => _service = value; }
         public string Nom { get => _nom; set => _nom = value; }
-        public int Salaire { get => _salaire; set => _salaire = value; }
+        public int Salaire { get => _salaire;
+            set
+            {
+                if (value < 0 || value > 1000000) {
+                    throw new ArgumentOutOfRangeException("Veuillez entrer un salaire correct.");
+                }
+                _salaire = value;
+
+            }
+
+
+        }
 
 
         public Salarié(int Matricule, string Service, string Nom, int Salaire)
@@ -24,7 +35,7 @@ namespace Exo11Salaire.NET
             _matricule = Matricule;
             _service = Service;
             _nom = Nom;
-            _salaire= Salaire;
+            this.Salaire = Salaire; // J'utilise la propriété Salaire pour utiliser la validation.
         }
     }
 }
