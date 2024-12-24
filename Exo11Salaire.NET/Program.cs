@@ -33,7 +33,8 @@ while (true)
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Vous n'étes pas autorisée a faire cette action. ");
         Console.ResetColor();
-    } 
+        continue;
+    }
 
     switch(choix)
     {
@@ -64,7 +65,12 @@ while (true)
         case 3:
             RemiseAZero();
             break;
-
+        default:
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Veuillez faire un choix correct.");
+            Console.ResetColor();
+            break;
     }
 }
 
